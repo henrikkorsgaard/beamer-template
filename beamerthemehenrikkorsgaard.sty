@@ -1,0 +1,211 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% THIS IS THE LOCAL INSTALL VERSION %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{fontspec}
+\RequirePackage{tikz}
+\RequirePackage[absolute,overlay]{textpos}
+
+\mode<presentation>
+%%% Removing navigation symbols
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=4em,text margin right=4em}
+
+%%% Colors
+\definecolor{HenrikDark}{RGB}{19,46,50}
+\definecolor{HenrikFont}{RGB}{55,58,60}
+\definecolor{HenrikFontLight}{RGB}{108, 108, 122}
+
+%%% fonts
+\setsansfont{Roboto}
+
+\renewcommand\mathfamilydefault{cmr}
+\renewcommand\bibfont{\fontsize{4}{6} \selectfont}
+
+\TPGrid[16pt,9pt]{16}{9}
+
+\defbeamertemplate{frametitle}{HenrikWhite}{%
+    \begin{textblock}{14}[0,1](0,1.5)%
+       {\color{white}\textbf{\huge\MakeUppercase{\protect\insertframetitle}}}%
+    \end{textblock}
+    
+   %\begin{textblock}{14}[0,0](1,2)%
+      %\tikz \fill [white] (-0.1,0) rectangle (0.7,0.05);
+   %\end{textblock}
+   %\vspace{2.5em}
+}
+
+\defbeamertemplate{frametitle}{HenrikDark}{%
+    \begin{textblock}{14}[0,1](0.4,1.5)%
+       {\color{HenrikDark}\textbf{\huge\MakeUppercase{\protect\insertframetitle}}}%
+    \end{textblock}
+    
+%    \begin{textblock}{14}[0,0](1,2)%
+%       \tikz \fill [HenrikDark] (-0.1,0) rectangle (0.7,0.05);
+%    \end{textblock}
+    \vspace{2.5em}
+}
+
+%%%% FOOTERS
+% \defbeamertemplate{footline}{AUDark}{%
+%     \begin{textblock}{3}[1,0](8.6,8.7)%
+%         \hfill\fontsize{4}{0}\selectfont SLIDE \insertframenumber\ IN \inserttotalframenumber
+%         \end{textblock}
+%         \begin{textblock}{1}[0,1](0,8.8)%
+%         \large\AULogo
+%     \end{textblock}
+%         \begin{textblock}{10}[0,1](1.1,8.5)%
+%         AARHUS
+%     \end{textblock}
+%     \begin{textblock}{10}[0,1](1.1,8.75)%
+%         UNIVERSITY
+%     \end{textblock}
+%     \begin{textblock}{10}[0,1](1.1,9)%
+%         \fontsize{4}{0}\textlight{\insertinstitute}
+%     \end{textblock}
+%     \begin{textblock}{1}[0.5,1](15.9,9)%
+%         \huge\AUSeal
+%     \end{textblock}
+% }
+
+% \defbeamertemplate{footline}{AUWhite}{%
+%     \begin{textblock}{3}[1,0](8.6,8.7)%
+%         \hfill\fontsize{4}{0}\selectfont SLIDE \insertframenumber\ IN \inserttotalframenumber
+%         \end{textblock}
+%         \begin{textblock}{1}[0,1](0,8.8)%
+%         {\color{white}\large\AULogo}
+%     \end{textblock}
+%         \begin{textblock}{10}[0,1](1.1,8.5)%
+%         AARHUS
+%     \end{textblock}
+%     \begin{textblock}{10}[0,1](1.1,8.75)%
+%         UNIVERSITY
+%     \end{textblock}
+%     \begin{textblock}{10}[0,1](1.1,9)%
+%         \fontsize{4}{0}\textlight{\insertinstitute}
+%     \end{textblock}
+%     \begin{textblock}{1}[0.5,1](15.9,9)%
+%         \huge\AUSeal
+%     \end{textblock}
+% }
+
+%%% Slide types set in options
+
+\makeatletter
+\define@key{beamerframe}{HenrikDark}[true]{%
+    \color{white}
+    \setbeamertemplate{frametitle}[HenrikWhite]%
+    \setbeamertemplate{footline}[HenrikWhite]%
+    \setbeamercolor*{background canvas}{bg=HenrikDark,fg=white}%
+    \setbeamercolor*{structure}{fg=white}%
+    \setbeamercolor*{itemize/enumerate body}{fg=white}%
+    \setbeamercolor*{itemize/enumerate subbody}{fg=white}%
+    \setbeamercolor*{itemize/enumerate subsubbody}{fg=white}%
+    \setbeamercolor*{description body}{fg=white}%
+    \setbeamercolor{math text}{fg=white}%
+    \setbeamercolor{caption}{fg=white}%
+}
+
+
+\makeatother
+
+% Resetting the frame style 
+\BeforeBeginEnvironment{frame}{%
+    \setbeamertemplate{frametitle}[HenrikDark]%
+    \setbeamertemplate{footline}[HenrikDark]%
+    \setbeamercolor*{background canvas}{bg=white,fg=HenrikDark}%
+    \setbeamercolor*{normal text}{bg=white,fg=HenrikDark}%
+    \setbeamercolor*{structure}{bg=white,fg=HenrikDark}%
+    \setbeamercolor*{itemize/enumerate body}{fg=HenrikDark}%
+    \setbeamercolor*{itemize/enumerate subbody}{fg=HenrikDark}%
+    \setbeamercolor*{itemize/enumerate subsubbody}{fg=HenrikDark}%
+    \setbeamercolor*{description body}{fg=HenrikDark}%
+    \setbeamercolor{caption}{fg=HenrikDark}%
+    \setbeamercolor{footnote}{fg=HenrikDark}%
+    \setbeamercolor{math text}{fg=black}%
+    \color{HenrikDark}
+    
+    \setbeamertemplate{description item}{%
+        \textbf\insertdescriptionitem\hfill
+    }
+}
+
+%%%% TITLE PAGE AND TITLE FOOTER
+
+\defbeamertemplate*{title page}{henrikkorsgaard}[1][]
+{ 
+    \begin{textblock}{14}[0,1](1,5)%
+        {\color{white}
+        \textbf{\Huge\MakeUppercase\inserttitle\\\vspace{0.3em}\large\insertshorttitle}}
+    \end{textblock}
+    
+    \begin{textblock}{10}[0,0](1,5)%
+       \vspace{1em}{\footnotesize\color{white}\insertauthor\hspace{0.5em}\insertshortauthor}
+    \end{textblock}
+}
+
+\defbeamertemplate{footline}{HenrikTitle}{%
+    \begin{textblock}{5}[0.5,0](6.5,8.7)%
+        {\color{white}\hfill\insertdate}
+    \end{textblock}
+        
+    \begin{textblock}{0}[0,1](0,8.8)%
+       %% Logo + info
+    \end{textblock}
+    
+    \begin{textblock}{10}[0,1](1.1,8.75)%
+        %% Not sure we need this yet
+    \end{textblock}
+    
+    \begin{textblock}{10}[0,1](1.1,9)%
+        %% Not sure we need this yet
+    \end{textblock}
+    
+    \begin{textblock}{1}[0.5,1](15.9,9)%
+       %% Not sure we need this yet
+    \end{textblock}
+}
+
+
+%% Script to ensure that the title page is styled correctly
+\makeatletter
+\def\ps@navigation@titlepage{%
+  \setbeamertemplate{footline}[HenrikTitle]
+  \setbeamercolor{background canvas}{bg=HenrikDark}
+  
+  \@nameuse{ps@navigation}}
+\addtobeamertemplate{title page}{\thispagestyle{navigation@titlepage}}{}
+\makeatother
+
+\AtBeginSection[] % 
+{
+\begin{frame}\frametitle{Outline}
+    \tableofcontents[currentsection]
+\end{frame}
+}
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}
+  {\vfill}
+  {\vskip\itemsep}
+  {}
+ {}
+\makeatother  
+
+\setbeamertemplate{section in toc}{%
+    {\color{HenrikDark}\textbf\inserttocsectionnumber.~\inserttocsection}%
+    \vspace{2pt}
+}
+
+%% Captions styling
+\setlength\abovecaptionskip{2pt}
+
+\setbeamertemplate{caption}{%
+    {\tiny\insertcaptionname ~\insertcaptionnumber: \insertcaption}%
+}
+%% Footnote styling
+\setbeamerfont{footnote}{size=\tiny}
+\addtobeamertemplate{footnote}{\hskip -1.8em}{}
+
+\mode<all>
+
