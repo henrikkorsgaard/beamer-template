@@ -1,7 +1,7 @@
 \documentclass[aspectratio=169]{beamer}
 \usepackage[square,numbers]{natbib}
 \bibliographystyle{apalike}
-\title[Stiby Systems Case Presentation]{UX Architecture for Data Collaboration}
+\title[Stibo Systems Case Presentation]{UX Architecture for Data Collaboration}
 \date[]{\today}
 \author[]{Henrik Korsgaard}
 \institute{DEPARTMENT OF COMPUTER SCIENCE} % Type in A
@@ -44,23 +44,24 @@
 \maketitle
 \end{frame}
 
-\begin{frame}{Outline and focus\footnote{Larsen-Ledet, Ida, and Henrik Korsgaard. Territorial functioning in \textbf{collaborative writing}. CSCW 2019\\Larsen-Ledet, Ida, Henrik Korsgaard, and Susanne Bødker. \textbf{Collaborative writing} across multiple artifact ecologies.CHI 2020}}
+\begin{frame}{Outline}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \item UX research process
-                \item ``Results'' and assumptions
-                \item Information design for shared views
-                \item Interaction design for collaborative features
+                \item Results and observations
+                \item Information design
+                \item Interaction design
                 %%\item If time, responsive filtering %% if you cannot execute this within time, then keep
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
-            As a newly hired UX architect, your initial task is to create an outline for the UX work in a project aimed at improving the UX of the \textbf{collaboration tooling} in an existing online Excel-like table system.\\
+            As a newly hired UX architect, your initial task is to create an outline for the UX work in a project aimed at improving the UX of the \textbf{collaboration tooling}\footnotemark{} in an existing online Excel-like table system.\\
             \vspace{1em}
             {\color{HenrikFontLight}\dots assume that you have the necessary budget for it.}
         \end{column}
     \end{columns}
+    \footnotetext{Ida Larsen-Ledet, and Henrik Korsgaard. Territorial functioning in \textbf{collaborative writing}. CSCW 2019\\Ida Larsen-Ledet, Henrik Korsgaard, and Susanne Bødker. \textbf{Collaborative writing} across multiple artifact ecologies.CHI 2020}
 \end{frame}
 
 \begin{frame}{UX Research}
@@ -68,10 +69,9 @@
         \small
         \item[Discovery:] \textbf{Why}, how, and when do users collaborate?
         \item[Define:] What are the main user scenarios, information concepts and features?
-        \item[Prototype:] User flows, wireframes, key interfaces and features
+        \item[Prototype:] \textit{Everything!}
         \item[Evaluate:] User testing and evaluation
         \item[Integrate:] Plan integration and delivery
-        %\item Think aloud evaluation
     \end{description}
     \begin{restoretext}
     \begin{backgroundblock}{7mm}{50mm}
@@ -99,18 +99,18 @@
         \begin{column}{0.5\textwidth}
             \small
             \textbf{Discover}
-            \begin{itemize}
-                \item Internal research and analytics
-                \item Contextual interviews with users (task sessions)
-                \item State-of-art on collaborative applications (CRDT)
-                \item Workshops!
-            \end{itemize}
+            \begin{enumerate}
+                \item Contextual interviews and task sessions observations
+                \item Internal/external research
+                \item Analytics (?)
+                \item Workshops (?)
+            \end{enumerate}
         \end{column}
         \begin{column}{0.5\textwidth}
             \small
             \textbf{Define}
             \begin{itemize}
-                \item Collaborative task objectives
+                \item Collaborative task objectives 
                 \item Scenarios, personas and user journeys
                 \item Information concepts and architecture
                 \item UX quality criteria and KPIs
@@ -137,16 +137,15 @@
 \end{restoretext}
 \end{frame}
 
-\begin{frame}{UX Research}
+\begin{frame}{UX Research -- iterate where needed}
     \begin{columns}[t]
         \begin{column}{0.5\textwidth}
             \small
             \textbf{Prototype}
             \begin{itemize}
                 \item User- and collaborative flow
-                \item Information architecture and layout
-                \item Data and view operations 
-                \item Real-time collaboration
+                \item Information architecture and UI design
+                \item Key interfaces and technical features
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
@@ -154,8 +153,7 @@
             \textbf{Evaluate}
             \begin{itemize}
                 \item Internal review and testing
-                \item (informal) user feedback
-                \item Think aloud evaluation 
+                \item User feedback (informal/think aloud)
                 \item Review UX quality criteria and KPIs
             \end{itemize}
         \end{column}
@@ -166,8 +164,8 @@
     \resizebox{1\textwidth}{!}{%
     \begin{tikzpicture}
 
-        \node[diamond,fill=HenrikDark!2, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
-        \node[diamond,fill=HenrikDark!2, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
+        \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
+        \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
 
         \node[signal to=east, signal from=west,shape=signal, draw, minimum width = 2.15cm, minimum height = 0.5cm] at (0.1,1) {\tiny Discover};
         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm] at (2.2,1) {\tiny Define};
@@ -237,33 +235,34 @@
 %     \end{columns}
 % \end{frame}
 
-\begin{frame}{Collaborative data scenarios}
+\begin{frame}{Results: Collaborative scenarios}
     \setlength{\leftmargini}{0.5cm}
     \begin{columns}[t]
-        \begin{column}{0.3\textwidth}
-            \textbf{1. Collaborative projects}
+        \begin{column}{0.33\textwidth}
+            \textbf{\small 1. Collaborative projects}
             \begin{itemize}
                 \scriptsize
                 \item Peers collaborate on a larger project
                 \item Different responsibilities and expertise
-                \item Mixed focus with a high degree of coordination
+                \item Mixed focus collaboration with a high degree of coordination
                 \item Multiple data views
             \end{itemize}
         \end{column}
         \begin{column}{0.33\textwidth}
-            \textbf{2. Real-time collaboration}
+            \textbf{\small 2. Real-time collaboration}
             \begin{itemize}
                 \scriptsize
                 \item Peers collaborate on smaller (urgent) tasks
-                \item Real-time collaboration with shared focus
+                \item Real-time collaboration
+                \item Shared task focus 
                 \item Few data views
             \end{itemize}
         \end{column}
         \begin{column}{0.33\textwidth}
-            \textbf{3. Training}
+            \textbf{\small 3. Training}
             \begin{itemize}
                 \scriptsize
-                \item Expert user provide training or help to one or more trainees, e.g. onboarding
+                \item Expert user provide training and onboarding of novices
                 \item Focused on learning the application and/or data
                 \item Tailored data views and exercises
             \end{itemize}
@@ -271,14 +270,14 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{UX qualities}
+\begin{frame}{Results: Key UX qualities}
     \begin{columns}
         \begin{column}{0.6\textwidth}
             \small
             \begin{itemize}
                 \item Sharing with collaborators should be easy and include task assignment and notes
                 \item Important to know who did what in a shared view (awareness, track changes, accountability etc.)
-                \item Support sandbox experimentation and analyses before publishing or merging to master
+                \item Support sandbox experimentation and analysis before publishing
                 \item Collaborative features should not overshadow existing task features
                 %\item A majority mention Google Drive as an example of a great collaboration tool
             \end{itemize}
@@ -292,21 +291,23 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Sharing in collaborative applications}
+\begin{frame}{Results: State-of-the-art collaborative UX}
     \begin{columns}
         \begin{column}{0.6\textwidth}
             \begin{itemize}
                 \small
                 \item Work object is shared by replication (content and formatting)
                 \item Communication is transient (chat)
-                \item Tools are individual, but similar across users (UI)
+                \item Tools are individual, but similar across users (`what-you-see-I-see')
                 \item Environment is not shared (browser/extensions)
+                \item[]
+                \item Not perfect, e.g. `the jumping text problem' and `cursor wars'
             \end{itemize}
         \end{column}
         \begin{column}{0.4\textwidth}
             \begin{figure}[h]
                 \centering
-                \includegraphics[width=0.8\textwidth]{images/gdocs.png}
+                \includegraphics[width=1\textwidth]{images/gdocs.png}
                 %\caption{Google Documents Sharing Model}
             \end{figure}
         \end{column}
@@ -325,13 +326,13 @@
 \end{frame}
 
 
-\begin{frame}{Making `views' first class objects}
+\begin{frame}{Making data views first class objects}
     \begin{columns}
         \begin{column}{0.4\textwidth}
             %% sige noget om hvorfor det er en challenge
             \begin{itemize}
                 \footnotesize
-                \item Data views as the main work object -- it's what is shared when collaborating
+                \item Data views are the main work objects -- they are what we share when collaborating
                 \item Views can be published in formats fitting the consumer needs
                 \item A data view encapsulate a data source, users, and the revision history
             \end{itemize}
@@ -339,7 +340,7 @@
         \begin{column}{0.6\textwidth}
             \begin{figure}[h]
                 \centering
-                \includegraphics[width=1\textwidth]{images/all-views-with-marks.png}
+                \includegraphics[width=1.1\textwidth]{images/all-views-with-marks.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -358,7 +359,7 @@
             %% sige noget om hvorfor det er en challenge
             \begin{itemize}
                 \small
-                \item Tabular view is the primary collaborative object
+                \item Tabular view is the primary synchronized/shared object
                 \item \dots filters cannot be shared until operationalized
                 \begin{itemize}
                     \scriptsize
@@ -382,15 +383,15 @@
 
 %% introduce the view design slide
 
-\begin{frame}{Collaborating in a\newline shared view}
+\begin{frame}{Revision history as key\\ collaboration support}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \small
-                \item Data operations as the replicated objects
-                \item Supports ensures locatability and accountability 
-                \item Rolling back changes
-                \item A set of operations can be exported to other views
+                \item Data operations as the replicated objects (CRDT)
+                \item Support task resumption, accountability and finding stuff
+                \item Support experimentation -- you can always roll back changes
+                \item A set of operations can be applied to other data views (macros)
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
@@ -414,28 +415,29 @@
 \end{frame}
 
 %% Skip if needed
-\begin{frame}{Key IA/IxD challenges}
-    \setlength\itemsep{10em}
-    \begin{itemize}
-        \item `Views' might be a difficult concept to grasph 
-        \item Revision history is powerful tool, but a difficult concept to get right 
-        \item Remote collaboration \textbf{require} additional communication channels
-        \item Developing and prototyping collaborative features pose different requirements than single user applications:
-        \begin{itemize}
-            \footnotesize
-            \vspace{0.3em}
-            \item Require more contextual user research and co-design activities
-            \vspace{0.1em}
-            \item Hard to study from application analytics
-            \vspace{0.1em}
-            \item Require some technical infrastructure to prototype collaboration
-        \end{itemize}
-    \end{itemize}
-\end{frame}
+% \begin{frame}{Key IA/IxD challenges}
+%     \setlength\itemsep{10em}
+%     \begin{itemize}
+%         \item `Views' might be a difficult concept to grasph 
+%         \item Revision history is powerful tool, but difficult to get right 
+%         \item Remote collaboration \textbf{require} additional communication channels
+%         \item Developing and prototyping collaborative features pose different requirements than single user applications:
+%         \begin{itemize}
+%             \footnotesize
+%             \vspace{0.3em}
+%             \item Require more contextual user research and co-design activities
+%             \vspace{0.1em}
+%             \item Hard to study from application analytics
+%             \vspace{0.1em}
+%             \item Require some technical infrastructure to prototype collaboration
+%         \end{itemize}
+%     \end{itemize}
+% \end{frame}
 
 \begin{frame}[DarkSlide]{}
+    \vspace{3em}
     \centering
-    \Large Thank you!\\
+    \Large THANK YOU\\
 \end{frame}
 
 \end{document}
