@@ -46,48 +46,21 @@
     \vspace{2.5em}
 }
 
-%%%% FOOTERS
-% \defbeamertemplate{footline}{AUDark}{%
-%     \begin{textblock}{3}[1,0](8.6,8.7)%
-%         \hfill\fontsize{4}{0}\selectfont SLIDE \insertframenumber\ IN \inserttotalframenumber
-%         \end{textblock}
-%         \begin{textblock}{1}[0,1](0,8.8)%
-%         \large\AULogo
-%     \end{textblock}
-%         \begin{textblock}{10}[0,1](1.1,8.5)%
-%         AARHUS
-%     \end{textblock}
-%     \begin{textblock}{10}[0,1](1.1,8.75)%
-%         UNIVERSITY
-%     \end{textblock}
-%     \begin{textblock}{10}[0,1](1.1,9)%
-%         \fontsize{4}{0}\textlight{\insertinstitute}
-%     \end{textblock}
-%     \begin{textblock}{1}[0.5,1](15.9,9)%
-%         \huge\AUSeal
-%     \end{textblock}
-% }
+\define@key{beamerframe}{DarkSlide}[true]{%
+    \color{white}
+    \setbeamertemplate{frametitle}[AUWhite]%
+    \setbeamertemplate{footline}{}%
+    \setbeamercolor*{background canvas}{bg=HenrikDark,fg=white}%
+    \setbeamercolor*{structure}{fg=white}%
+    \setbeamercolor*{itemize/enumerate body}{fg=white}%
+    \setbeamercolor*{itemize/enumerate subbody}{fg=white}%
+    \setbeamercolor*{itemize/enumerate subsubbody}{fg=white}%
+    \setbeamercolor*{description body}{fg=white}%
+    \setbeamercolor{caption}{fg=white}%
+    \setbeamercolor{math text}{fg=white}%
+    \setbeamercolor{footnote}{fg=white}%
+}
 
-% \defbeamertemplate{footline}{AUWhite}{%
-%     \begin{textblock}{3}[1,0](8.6,8.7)%
-%         \hfill\fontsize{4}{0}\selectfont SLIDE \insertframenumber\ IN \inserttotalframenumber
-%         \end{textblock}
-%         \begin{textblock}{1}[0,1](0,8.8)%
-%         {\color{white}\large\AULogo}
-%     \end{textblock}
-%         \begin{textblock}{10}[0,1](1.1,8.5)%
-%         AARHUS
-%     \end{textblock}
-%     \begin{textblock}{10}[0,1](1.1,8.75)%
-%         UNIVERSITY
-%     \end{textblock}
-%     \begin{textblock}{10}[0,1](1.1,9)%
-%         \fontsize{4}{0}\textlight{\insertinstitute}
-%     \end{textblock}
-%     \begin{textblock}{1}[0.5,1](15.9,9)%
-%         \huge\AUSeal
-%     \end{textblock}
-% }
 
 %%% Slide types set in options
 
@@ -206,6 +179,6 @@
 %% Footnote styling
 \setbeamerfont{footnote}{size=\tiny}
 \addtobeamertemplate{footnote}{\hskip -1.8em}{}
-
+\setbeamertemplate{itemize subitem}[circle]
 \mode<all>
 

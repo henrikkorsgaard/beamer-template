@@ -14,6 +14,7 @@
 \usetikzlibrary{arrows.meta}
 \usepackage{fontawesome5}
 \usepackage{changepage}
+
 \makeatletter
 \newbox\@backgroundblock
 \newenvironment{backgroundblock}[2]{%
@@ -43,7 +44,7 @@
 \maketitle
 \end{frame}
 
-\begin{frame}{Outline and focus}
+\begin{frame}{Outline and focus\footnote{Larsen-Ledet, Ida, and Henrik Korsgaard. Territorial functioning in \textbf{collaborative writing}. CSCW 2019\\Larsen-Ledet, Ida, Henrik Korsgaard, and Susanne Bødker. \textbf{Collaborative writing} across multiple artifact ecologies.CHI 2020}}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
@@ -65,7 +66,7 @@
 \begin{frame}{UX Research}
     \begin{description}
         \small
-        \item[Discovery:] How, when and why do users collaborate?
+        \item[Discovery:] \textbf{Why}, how, and when do users collaborate?
         \item[Define:] What are the main user scenarios, information concepts and features?
         \item[Prototype:] User flows, wireframes, key interfaces and features
         \item[Evaluate:] User testing and evaluation
@@ -78,8 +79,8 @@
     \resizebox{1\textwidth}{!}{%
     \begin{tikzpicture}
 
-        \node[diamond,fill=HenrikDark!2, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
-        \node[diamond,fill=HenrikDark!2, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
+        \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
+        \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
 
         \node[signal to=east, signal from=west,shape=signal, draw, minimum width = 2.15cm, minimum height = 0.5cm, fill=white] at (0.1,1) {\tiny Discover};
         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white] at (2.2,1) {\tiny Define};
@@ -100,18 +101,17 @@
             \textbf{Discover}
             \begin{itemize}
                 \item Internal research and analytics
-                \item Contextual interviews with users
-                \item Observe collaborative task sessions
+                \item Contextual interviews with users (task sessions)
                 \item State-of-art on collaborative applications (CRDT)
+                \item Workshops!
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
             \small
             \textbf{Define}
             \begin{itemize}
-                \item Workshops!
                 \item Collaborative task objectives
-                \item Scenarios, personas and user journeys (user stories)
+                \item Scenarios, personas and user journeys
                 \item Information concepts and architecture
                 \item UX quality criteria and KPIs
             \end{itemize}
@@ -123,12 +123,12 @@
     \resizebox{1\textwidth}{!}{%
     \begin{tikzpicture}
 
-        \node[diamond,fill=HenrikDark!2, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
-        \node[diamond,fill=HenrikDark!2, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
+        \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
+        \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
 
-        \node[signal to=east, signal from=west,shape=signal, draw, minimum width = 2.15cm, minimum height = 0.5cm, fill=HenrikDark, white] at (0.1,1) {\tiny Discover};
-        \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=HenrikDark, white] at (2.2,1) {\tiny Define};
-        \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white] at (4.37,1) {\tiny Prototype};
+        \node[signal to=east, signal from=west,shape=signal, draw, minimum width = 2.15cm, minimum height = 0.5cm,white, fill=HenrikDark] at (0.1,1) {\tiny Discover};
+        \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm,white,fill=HenrikDark] at (2.2,1) {\tiny Define};
+        \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm] at (4.37,1) {\tiny Prototype};
         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white] at (6.54,1) {\tiny Evaluate};
         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white] at (8.7,1) {\tiny Integrate}; 
     \end{tikzpicture}
@@ -143,7 +143,7 @@
             \small
             \textbf{Prototype}
             \begin{itemize}
-                \item User and collaborative flow
+                \item User- and collaborative flow
                 \item Information architecture and layout
                 \item Data and view operations 
                 \item Real-time collaboration
@@ -171,8 +171,8 @@
 
         \node[signal to=east, signal from=west,shape=signal, draw, minimum width = 2.15cm, minimum height = 0.5cm] at (0.1,1) {\tiny Discover};
         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm] at (2.2,1) {\tiny Define};
-        \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white, fill=HenrikDark, white] at (4.37,1) {\tiny Prototype};
-        \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white, fill=HenrikDark, white] at (6.54,1) {\tiny Evaluate};
+        \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, white, fill=HenrikDark] at (4.37,1) {\tiny Prototype};
+        \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, white, fill=HenrikDark] at (6.54,1) {\tiny Evaluate};
         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white] at (8.7,1) {\tiny Integrate}; 
     \end{tikzpicture}
     }
@@ -237,12 +237,11 @@
 %     \end{columns}
 % \end{frame}
 
-
-\begin{frame}{Collaborative data scenarios\footnote{Larsen-Ledet, Ida, and Henrik Korsgaard. Territorial functioning in collaborative writing: fragmented exchanges and common outcomes. Computer Supported Cooperative Work (CSCW) 28 (2019): 391-433.\\Larsen-Ledet, Ida, Henrik Korsgaard, and Susanne Bødker. Collaborative writing across multiple artifact ecologies. Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems. 2020.}}
+\begin{frame}{Collaborative data scenarios}
     \setlength{\leftmargini}{0.5cm}
     \begin{columns}[t]
         \begin{column}{0.3\textwidth}
-            \textbf{Collaborative projects}
+            \textbf{1. Collaborative projects}
             \begin{itemize}
                 \scriptsize
                 \item Peers collaborate on a larger project
@@ -252,7 +251,7 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.33\textwidth}
-            \textbf{Real-time collaboration}
+            \textbf{2. Real-time collaboration}
             \begin{itemize}
                 \scriptsize
                 \item Peers collaborate on smaller (urgent) tasks
@@ -261,7 +260,7 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.33\textwidth}
-            \textbf{Training}
+            \textbf{3. Training}
             \begin{itemize}
                 \scriptsize
                 \item Expert user provide training or help to one or more trainees, e.g. onboarding
@@ -278,7 +277,7 @@
             \small
             \begin{itemize}
                 \item Sharing with collaborators should be easy and include task assignment and notes
-                \item Important to know who did what in a shared data view (awareness, track changes, accountability etc.)
+                \item Important to know who did what in a shared view (awareness, track changes, accountability etc.)
                 \item Support sandbox experimentation and analyses before publishing or merging to master
                 \item Collaborative features should not overshadow existing task features
                 %\item A majority mention Google Drive as an example of a great collaboration tool
@@ -340,28 +339,42 @@
         \begin{column}{0.6\textwidth}
             \begin{figure}[h]
                 \centering
-                \includegraphics[width=1\textwidth]{images/all-data-view.png}
+                \includegraphics[width=1\textwidth]{images/all-views-with-marks.png}
             \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
 
 \begin{frame}{Creating a new data view}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1\textwidth]{images/create-new-view-flow.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Collaborative tooling with tabular data}
     \begin{columns}
         \begin{column}{0.4\textwidth}
-            \begin{enumerate}
-                \footnotesize
-                \item Select data source(s) (or import)
-                \item Preview data 
-                \item Add collaborators
-                \item Generate view
-            \end{enumerate}
+            %% sige noget om hvorfor det er en challenge
+            \begin{itemize}
+                \small
+                \item Tabular view is the primary collaborative object
+                \item \dots filters cannot be shared until operationalized
+                \begin{itemize}
+                    \scriptsize
+                    \vspace{0.4em}
+                    \item \textbf{Action items} to support different roles
+                    \vspace{0.2em}
+                    \item \textbf{History} to support track changes and accountability
+                    \vspace{0.2em}
+                    \item \textbf{Collaborator} pane for navigation, awareness and mute
+                \end{itemize}
+            \end{itemize}
         \end{column}
         \begin{column}{0.6\textwidth}
             \begin{figure}[h]
-                \vspace{-2em}
                 \centering
-                \includegraphics[width=1.1\textwidth]{images/generate-view-flow.png}
+                \includegraphics[width=1\textwidth]{images/filter-view-with-marks.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -369,58 +382,60 @@
 
 %% introduce the view design slide
 
-\begin{frame}{Manipulating shared view}
+\begin{frame}{Collaborating in a\newline shared view}
     \begin{columns}
-        \begin{column}{0.6\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \small
-                \item Data operations as the replicated objects:
-                \begin{itemize}
-                    \footnotesize
-                    \item Data manipulation
-                    \item View manipulation 
-                \end{itemize}
-                \item This ensures locatability from history into the changes
-                \item \dots and accountability (who did what -- where are we)
-                \item Rolling back changes (undo/hide operation)
-                \item A set of operations (a macro) can be exported to other data views
-                \item (and reviewed before applied to master data)
+                \item Data operations as the replicated objects
+                \item Supports ensures locatability and accountability 
+                \item Rolling back changes
+                \item A set of operations can be exported to other views
             \end{itemize}
         \end{column}
-        \begin{column}{0.45\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{figure}[h]
                 \vspace{-4em}
                 \centering
-                \includegraphics[width=1\textwidth]{images/sharing-history.png}
+                \includegraphics[width=0.9\textwidth]{images/shared-history.png}
             \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{Collaborating with data views: Assign action item}
+\begin{frame}{Collaborating on common tasks: Assign action item}
+    \vspace{2em}
+    \begin{restoretext}
     \begin{figure}[h]
         \centering
         \includegraphics[width=1\textwidth]{images/assign-action-item.png}
     \end{figure}
+\end{restoretext}
 \end{frame}
 
+%% Skip if needed
 \begin{frame}{Key IA/IxD challenges}
+    \setlength\itemsep{10em}
     \begin{itemize}
-        \small
-        \item `Views' might be a difficult concept to grasph for non-data users
-        \item Revision history is a difficult concept to get right and powerful for non-programmers
+        \item `Views' might be a difficult concept to grasph 
+        \item Revision history is powerful tool, but a difficult concept to get right 
         \item Remote collaboration \textbf{require} additional communication channels
-        \item What happens if we add automatisation, quality tests etc. that have delay?
-        \item Prototyping (CRDT) collaborative tools pose different requirements than single user applications:
+        \item Developing and prototyping collaborative features pose different requirements than single user applications:
         \begin{itemize}
             \footnotesize
+            \vspace{0.3em}
             \item Require more contextual user research and co-design activities
-            \item Hard to study from application analytics (but I have done that)
-            \item Require some technical infrastructure to prototype collaboration (websockets will get you 80\% there)
+            \vspace{0.1em}
+            \item Hard to study from application analytics
+            \vspace{0.1em}
+            \item Require some technical infrastructure to prototype collaboration
         \end{itemize}
     \end{itemize}
 \end{frame}
-%% I want to explore history
-%% I want to explore action items
+
+\begin{frame}[DarkSlide]{}
+    \centering
+    \Large Thank you!\\
+\end{frame}
 
 \end{document}
