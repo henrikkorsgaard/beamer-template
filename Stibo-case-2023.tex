@@ -50,18 +50,16 @@
             \begin{itemize}
                 \item UX research process
                 \item Results and observations
-                \item Information design
+                \item Information architecture
                 \item Interaction design
-                %%\item If time, responsive filtering %% if you cannot execute this within time, then keep
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
-            As a newly hired UX architect, your initial task is to create an outline for the UX work in a project aimed at improving the UX of the \textbf{collaboration tooling}\footnotemark{} in an existing online Excel-like table system.\\
+            As a newly hired UX architect, your initial task is to create an outline for the UX work in a project aimed at improving the UX of the \textbf{collaboration tooling} in an existing online Excel-like table system.\\
             \vspace{1em}
             {\color{HenrikFontLight}\dots assume that you have the necessary budget for it.}
         \end{column}
     \end{columns}
-    \footnotetext{Ida Larsen-Ledet, and Henrik Korsgaard. Territorial functioning in \textbf{collaborative writing}. CSCW 2019\\Ida Larsen-Ledet, Henrik Korsgaard, and Susanne Bødker. \textbf{Collaborative writing} across multiple artifact ecologies.CHI 2020}
 \end{frame}
 
 \begin{frame}{UX Research - key questions}
@@ -75,7 +73,7 @@
                 \item What are the primary tasks and objectives?
                 \item What are the different roles and responsibilities in collaboration? 
                 \item How do remote work impact the user experience?
-                \item What other tools do they use to support the tasks -- communication, analysis etc.?
+                \item What other tools do they use to support the tasks -- planning, communication, analysis etc.?
             \end{itemize}
         \end{column}
         \begin{column}{0.4\textwidth}
@@ -85,24 +83,7 @@
             \end{figure}
         \end{column}
     \end{columns}
-%     \begin{restoretext}
-%     \begin{backgroundblock}{7mm}{50mm}
-%     \centering
-%     \resizebox{1\textwidth}{!}{%
-%     \begin{tikzpicture}
-
-%         \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
-%         \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
-
-%         \node[signal to=east, signal from=west,shape=signal, draw, minimum width = 2.15cm, minimum height = 0.5cm, fill=white] at (0.1,1) {\tiny Discover};
-%         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white] at (2.2,1) {\tiny Define};
-%         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white] at (4.37,1) {\tiny Prototype};
-%         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white] at (6.54,1) {\tiny Evaluate};
-%         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm, fill=white] at (8.7,1) {\tiny Integrate}; 
-%     \end{tikzpicture}
-%     }
-% \end{backgroundblock}
-% \end{restoretext}
+    \let\thefootnote\relax\footnotetext{Ida Larsen-Ledet, and Henrik Korsgaard. Territorial functioning in \textbf{collaborative writing}. CSCW 2019\\Ida Larsen-Ledet, Henrik Korsgaard, and Susanne Bødker. \textbf{Collaborative writing} across multiple artifact ecologies.CHI 2020}
 \end{frame}
 
 
@@ -113,11 +94,11 @@
             \small
             \textbf{Discover}
             \begin{enumerate}
-                \item Observe collaborative session
-                \item Contextual interviews
+                \item Contextual interviews of collaborative session(s)
+                \item Task flow analysis
                 \item Internal/external research
-                \item Analytics and in-app surveys
-                \item Workshops
+                \item Workshops (?)
+                \item Analytics (?)
             \end{enumerate}
         \end{column}
         \begin{column}{0.5\textwidth}
@@ -137,8 +118,8 @@
     \resizebox{1\textwidth}{!}{%
     \begin{tikzpicture}
 
-        \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
-        \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
+        \node[diamond,fill=HenrikDark!3, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
+        \node[diamond,fill=HenrikDark!3, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
 
         \node[signal to=east, signal from=west,shape=signal, draw, minimum width = 2.15cm, minimum height = 0.5cm,white, fill=HenrikDark] at (0.1,1) {\tiny Discover};
         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm,white,fill=HenrikDark] at (2.2,1) {\tiny Define};
@@ -179,8 +160,8 @@
     \resizebox{1\textwidth}{!}{%
     \begin{tikzpicture}
 
-        \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
-        \node[diamond,fill=HenrikDark!4, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
+        \node[diamond,fill=HenrikDark!3, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (1.1,1) {};
+        \node[diamond,fill=HenrikDark!3, minimum width = 4.5cm, minimum height = 4.5cm] (d) at (5.5,1) {};
 
         \node[signal to=east, signal from=west,shape=signal, draw, minimum width = 2.15cm, minimum height = 0.5cm] at (0.1,1) {\tiny Discover};
         \node[signal to=east, signal from=west, shape=signal, draw, minimum width = 2.3cm, minimum height = 0.5cm] at (2.2,1) {\tiny Define};
@@ -193,64 +174,7 @@
 \end{restoretext}
 \end{frame}
 
-% \begin{frame}{Results: Collaborative scenarios}
-%     \begin{columns}
-%         \begin{column}{0.7\textwidth}
-%             \small
-%             \textbf{Collaboration projects}
-%             \begin{itemize}
-%                 \footnotesize
-%                 \item Multiple peers collaborate on a larger task over time
-%                 \item Different roles, responsibilities and expertise
-%                 \item Turn-taking with a high degree of coordination
-%             \end{itemize}
-%             \textbf{Incident response}
-%             \begin{itemize}
-%                 \footnotesize
-%                 \item 2 peers collaborate to solve a pressing issue
-%                 \item Real-time ``jump-in-and-consult'' collaboration
-%             \end{itemize}
-%             \textbf{Training}
-%             \begin{itemize}
-%                 \footnotesize
-%                 \item Instructor help one or more trainees
-%                 \item Focused on learning the application and/or data 
-%             \end{itemize}
-%         \end{column}
-%         \begin{column}{0.3\textwidth}
-%             \centering
-%             \resizebox{0.8\textwidth}{!}{%
-%             \begin{tikzpicture}
-%                 \node[] at (0,2.1) {\small\faUser};
-%                 \draw[{Straight Barb[scale=0.5]}-{Straight Barb[scale=0.5]}] (0.25,2) to[bend right=-45] (0.58,1.5);
-%                 \node[] at (0.55,1.2) {\small\faUser};
-%                 \draw[{Straight Barb[scale=0.5]}-{Straight Barb[scale=0.5]}] (-0.25,2) to[bend right=45] (-0.58,1.5);
-%                 \node[] at (0,1.5) {\scriptsize\faDatabase};
-%                 \draw[{Straight Barb[scale=0.5]}-{Straight Barb[scale=0.5]}] (-0.3,1) to[bend right=45] (0.3,1);
-%                 \node[] at (-0.55,1.2) {\small\faUser};
-
-%                 \node[] at (0.7,0) {\small\faUser};
-%                 \draw[{Straight Barb[scale=0.5]}-] (0.15,0) to (0.5,0);
-%                 \node[] at (0,0) {\tiny\faDatabase};
-%                 \draw[{Straight Barb[scale=0.5]}-] (-0.15,0) to (-0.5,0);
-%                 \node[] at (-0.7,0) {\small\faUser};
-
-%                 \node[] at (-0.7,-1.5) {\small\faUser};
-%                 \draw[-{Straight Barb[scale=0.5]}] (-0.5,-1.5) to (-0.15,-1.5);
-%                 \node[] at (0,-1.5) {\tiny\faDatabase};
-%                 \draw[-{Straight Barb[scale=0.5]}] (0.15,-1.4) to (0.5,-1.1);
-%                 \draw[-{Straight Barb[scale=0.5]}] (0.15,-1.5) to (0.5,-1.5);
-%                 \draw[-{Straight Barb[scale=0.5]}] (0.15,-1.6) to (0.5,-1.9);
-%                 \node[] at (0.7,-1.1) {\scriptsize\faUser};
-%                 \node[] at (0.7,-1.5) {\scriptsize\faUser};
-%                 \node[] at (0.7,-1.9) {\scriptsize\faUser};
-%             \end{tikzpicture}
-%             }
-%         \end{column}
-%     \end{columns}
-% \end{frame}
-
-\begin{frame}{Results: Collaborative scenarios}
+\begin{frame}{Collaborative scenarios}
     \setlength{\leftmargini}{0.5cm}
     \begin{columns}[t]
         \begin{column}{0.33\textwidth}
@@ -285,19 +209,20 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Results: Key UX qualities}
+\begin{frame}{Key UX qualities}
     \begin{columns}
-        \begin{column}{0.6\textwidth}
+        \begin{column}{0.7\textwidth}
             \small
             \begin{itemize}
+                \item Collaboration should be responsive and clearly communicated
                 \item Sharing with collaborators should be easy and include task assignment and notes
                 \item Important to know who did what in a shared view (awareness, track changes, accountability etc.)
                 \item Support sandbox experimentation and analysis before publishing
-                \item Collaborative features should not overshadow existing task features
-                %\item A majority mention Google Drive as an example of a great collaboration tool
+                \item Collaborative features should not compromise existing task/productivity features
             \end{itemize}
         \end{column}
         \begin{column}{0.4\textwidth}
+            \vspace{-2em}
             \begin{figure}[h]
                 \centering
                 \includegraphics[width=1\textwidth]{images/Users.png}
@@ -306,48 +231,12 @@
     \end{columns}
 \end{frame}
 
-% \begin{frame}{Results: State-of-the-art collaborative UX}
-%     \begin{columns}
-%         \begin{column}{0.6\textwidth}
-%             \begin{itemize}
-%                 \small
-%                 \item Work object is shared by replication (content and formatting)
-%                 \item Communication is transient (chat)
-%                 \item Tools are individual, but similar across users (`what-you-see-I-see')
-%                 \item Environment is not shared (browser/extensions)
-%                 \item[]
-%                 \item Not perfect, e.g. `the jumping text problem' and `cursor wars'
-%             \end{itemize}
-%         \end{column}
-%         \begin{column}{0.4\textwidth}
-%             \begin{figure}[h]
-%                 \centering
-%                 \includegraphics[width=1\textwidth]{images/gdocs.png}
-%                 %\caption{Google Documents Sharing Model}
-%             \end{figure}
-%         \end{column}
-%     \end{columns}
-% \end{frame}
-
-\begin{frame}{Interaction Design features}
-    \begin{itemize}
-        \item The user can save changes as individual \textbf{views} (sheets) of data
-        \item \textbf{The user can share their saved views with other users}
-        \item[] $\rightarrow$ The user can add or remove columns from the \textbf{view}
-        \item[] $\rightarrow$ Users can filter and order the table content
-        \item \textbf{Multiple users must be able to work on the same views simultaneously}
-        \item[] $\rightarrow$ The users of the system may be located on multiple locations
-    \end{itemize} 
-\end{frame}
-
-
 \begin{frame}{Information Design: Data views as first class objects}
     \begin{columns}
         \begin{column}{0.4\textwidth}
-            %% sige noget om hvorfor det er en challenge
             \begin{itemize}
                 \footnotesize
-                \item The main information artifact when collaborating -- it's what we share and work on
+                \item Main information artifact when collaborating -- it's what we share and work on
                 \item A data view encapsulate a data source, users, and the revision history
                 \item Views can be published in formats fitting the consumer needs
             \end{itemize}
@@ -361,7 +250,7 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Creating a new data view}
+\begin{frame}{Creating and sharing a\\ data view}
     \begin{figure}[h]
         \centering
         \includegraphics[width=1\textwidth]{images/create-new-view-flow.png}
@@ -371,14 +260,11 @@
 \begin{frame}{Collaborative tooling with tabular data}
     \begin{columns}
         \begin{column}{0.4\textwidth}
-            %% sige noget om hvorfor det er en challenge
             \begin{itemize}
                 \small
-                %\item Tabular view is the primary synchronized/shared object
-                %\item \dots filters cannot be shared until operationalized
-                \item \textbf{Action items:} to support different roles and tasks
-                \item \textbf{History} to support track changes and accountability
-                \item \textbf{Collaborator} pane for awareness and navigation
+                \item \textbf{Action items} supports different roles and tasks
+                \item \textbf{Revision history} supports shared track changes and accountability
+                \item \textbf{Collaborator pane} supports awareness and social navigation
             \end{itemize}
         \end{column}
         \begin{column}{0.6\textwidth}
@@ -420,27 +306,6 @@
         \end{column}
     \end{columns}
 \end{frame}
-
-
-%% Skip if needed
-% \begin{frame}{Key IA/IxD challenges}
-%     \setlength\itemsep{10em}
-%     \begin{itemize}
-%         \item `Views' might be a difficult concept to grasph 
-%         \item Revision history is powerful tool, but difficult to get right 
-%         \item Remote collaboration \textbf{require} additional communication channels
-%         \item Developing and prototyping collaborative features pose different requirements than single user applications:
-%         \begin{itemize}
-%             \footnotesize
-%             \vspace{0.3em}
-%             \item Require more contextual user research and co-design activities
-%             \vspace{0.1em}
-%             \item Hard to study from application analytics
-%             \vspace{0.1em}
-%             \item Require some technical infrastructure to prototype collaboration
-%         \end{itemize}
-%     \end{itemize}
-% \end{frame}
 
 \begin{frame}[DarkSlide]{}
     \vspace{3em}
