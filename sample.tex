@@ -158,9 +158,9 @@
             \small
             \textbf{Prototype}
             \begin{itemize}
-                \item User- and collaborative flow
+                \item Collaborative user flow
                 \item Information architecture and UI design
-                \item Key interfaces and technical features
+                \item Key UI components and technical features
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
@@ -306,28 +306,28 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Results: State-of-the-art collaborative UX}
-    \begin{columns}
-        \begin{column}{0.6\textwidth}
-            \begin{itemize}
-                \small
-                \item Work object is shared by replication (content and formatting)
-                \item Communication is transient (chat)
-                \item Tools are individual, but similar across users (`what-you-see-I-see')
-                \item Environment is not shared (browser/extensions)
-                \item[]
-                \item Not perfect, e.g. `the jumping text problem' and `cursor wars'
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.4\textwidth}
-            \begin{figure}[h]
-                \centering
-                \includegraphics[width=1\textwidth]{images/gdocs.png}
-                %\caption{Google Documents Sharing Model}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
+% \begin{frame}{Results: State-of-the-art collaborative UX}
+%     \begin{columns}
+%         \begin{column}{0.6\textwidth}
+%             \begin{itemize}
+%                 \small
+%                 \item Work object is shared by replication (content and formatting)
+%                 \item Communication is transient (chat)
+%                 \item Tools are individual, but similar across users (`what-you-see-I-see')
+%                 \item Environment is not shared (browser/extensions)
+%                 \item[]
+%                 \item Not perfect, e.g. `the jumping text problem' and `cursor wars'
+%             \end{itemize}
+%         \end{column}
+%         \begin{column}{0.4\textwidth}
+%             \begin{figure}[h]
+%                 \centering
+%                 \includegraphics[width=1\textwidth]{images/gdocs.png}
+%                 %\caption{Google Documents Sharing Model}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
 
 \begin{frame}{Interaction Design features}
     \begin{itemize}
@@ -341,15 +341,15 @@
 \end{frame}
 
 
-\begin{frame}{Making data views first class objects}
+\begin{frame}{Information Design: Data views as first class objects}
     \begin{columns}
         \begin{column}{0.4\textwidth}
             %% sige noget om hvorfor det er en challenge
             \begin{itemize}
                 \footnotesize
-                \item Data views are the main work objects -- they are what we share when collaborating
-                \item Views can be published in formats fitting the consumer needs
+                \item The main information artifact when collaborating -- it's what we share and work on
                 \item A data view encapsulate a data source, users, and the revision history
+                \item Views can be published in formats fitting the consumer needs
             \end{itemize}
         \end{column}
         \begin{column}{0.6\textwidth}
@@ -374,17 +374,11 @@
             %% sige noget om hvorfor det er en challenge
             \begin{itemize}
                 \small
-                \item Tabular view is the primary synchronized/shared object
-                \item \dots filters cannot be shared until operationalized
-                \begin{itemize}
-                    \scriptsize
-                    \vspace{0.4em}
-                    \item \textbf{Action items} to support different roles
-                    \vspace{0.2em}
-                    \item \textbf{History} to support track changes and accountability
-                    \vspace{0.2em}
-                    \item \textbf{Collaborator} pane for navigation, awareness and mute
-                \end{itemize}
+                %\item Tabular view is the primary synchronized/shared object
+                %\item \dots filters cannot be shared until operationalized
+                \item \textbf{Action items:} to support different roles and tasks
+                \item \textbf{History} to support track changes and accountability
+                \item \textbf{Collaborator} pane for awareness and navigation
             \end{itemize}
         \end{column}
         \begin{column}{0.6\textwidth}
@@ -396,7 +390,15 @@
     \end{columns}
 \end{frame}
 
-%% introduce the view design slide
+\begin{frame}{Assign action item to collaborators}
+    \vspace{2em}
+    \begin{restoretext}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1\textwidth]{images/assign-action-item.png}
+    \end{figure}
+\end{restoretext}
+\end{frame}
 
 \begin{frame}{Revision history as key\\ collaboration support}
     \begin{columns}
@@ -419,15 +421,6 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Collaborating on common tasks: Assign action item}
-    \vspace{2em}
-    \begin{restoretext}
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=1\textwidth]{images/assign-action-item.png}
-    \end{figure}
-\end{restoretext}
-\end{frame}
 
 %% Skip if needed
 % \begin{frame}{Key IA/IxD challenges}
